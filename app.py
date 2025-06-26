@@ -28,7 +28,7 @@ if uploaded: img = Image.open(uploaded)
 elif cam: img = Image.open(cam)
 
 if img:
-    st.image(img, caption="Input", use_column_width=True)
+    st.image(img, caption="Input", use_container_width=True)
     x = transform(img).unsqueeze(0)
 
     preds = model(x)
